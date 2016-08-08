@@ -1,0 +1,101 @@
+// -------------
+// Feature
+// -------------
+
+.feature {
+    @media @mobile {
+        margin-bottom: 0;
+        opacity: 1 !important;
+    }
+    .background-image {
+        background-repeat: no-repeat;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        display: table;
+        height: 800px;
+        width: 100%;
+        @media only screen and (max-width: 1200px) {
+            height: 600px;
+        }
+        @media only screen and (max-width: 900px) {
+            height: 450px;
+            background-attachment: scroll!important;
+        }
+        @media @mobile {
+            height: 300px;
+        }
+        &:after {
+            display: none;
+        }
+    }
+    .content-wrap {
+        display: table-cell;
+        vertical-align: bottom;
+        padding: 0;
+    }
+    .content-inner-wrap {
+        width: 50%;
+        height: 100%;
+        padding: 0;
+        background-color: @color__feature-content--background;
+
+        @media @mobile {
+            padding: 20px 0;
+            width: 100%;
+            margin: 0 auto;
+            margin-bottom: 0;
+            background-color: hsla(hue(@color__feature-content--background), saturation(@color__feature-content--background), lightness(@color__feature-content--background), 0.9);
+        }
+    }
+    .headline {
+        padding: 5px 0;
+        font-family: @font__feature-headline--font-family;
+        color: @color__feature-headline--text;
+        font-size: @font__feature-headline--font-size;
+        font-weight: @font__feature-headline--font-weight;
+        line-height: @font__feature-headline--line-height;
+        letter-spacing: @font__feature-headline--letter-spacing;
+    }
+    .strapline {
+        font-family: @font__feature-strapline--font-family;
+        color: @color__feature-strapline--text;
+        font-size: @font__feature-strapline--font-size;
+        font-weight: @font__feature-strapline--font-weight;
+        line-height: @font__feature-strapline--line-height;
+        letter-spacing: @font__feature-strapline--letter-spacing;
+    }
+
+    .headline,
+    .strapline,
+    .button {
+        display: block;
+        width: 70%;
+        margin: 0 auto;
+        text-align: left;
+        @media @tablet {
+            width: 80%;
+        }
+        @media @mobile {
+            width: 90%;
+        }
+    }
+    .button {
+        position: relative;
+        background-color: transparent;
+        color: @color__feature-button--text;
+        font-size: @font__feature-strapline--font-size;
+        padding-left: 0;
+        &:after {
+            content: "\2192";
+            position: absolute;
+            padding-left: 5px;
+            padding-top: 1px;
+        }
+        &:hover {
+            color: @color__link--text;
+            background-color: transparent;
+        }
+    }
+}

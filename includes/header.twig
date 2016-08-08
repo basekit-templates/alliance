@@ -1,0 +1,18 @@
+<!-- Header include -->
+<header class="template-header">
+    {{widget('extendednavigation', 'navigation', {"align":"center"})|raw}}
+    <div class="brand">
+        {{widget('logo', 'logo', {"defaultlogo": asset('images/logo-default.png'), "showTplWidget":"0"})|raw}}
+        {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+    </div>
+    {% if plugins.blog.live %}
+    <div class="header-button">
+        {{widget('button', 'headerbutton', {
+          'text': 'Contribute',
+          'align': 'widget-align-right',
+          'target': '_blank'
+        })|raw}}
+    </div>
+    {% endif %}
+</header>
+

@@ -1,0 +1,184 @@
+
+
+.responsiveslideshow,
+.responsiveslideshow .figure {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    min-height: 400px;
+    background-color: @color__slideshow--background;
+    @media only screen and (max-width: 735px) {
+        min-height: 350px;
+    }
+    @media only screen and (max-width: 650px) {
+        min-height: 300px;
+    }
+    @media only screen and (max-width: 500px) {
+        min-height: 250px;
+    }
+}
+
+// Slideshow Caption
+// -----------------
+
+.responsiveslideshow {
+    .caption {
+        top: 0;
+        width: 25%;
+        padding: 30px;
+        background-color: @color__slideshow-caption--background;
+        opacity: 0.9;
+        @media only screen and (max-width: 900px) {
+            width: 30%;
+        }
+        @media only screen and (max-width: 735px) {
+            width: 100%;
+            top: inherit;
+            padding: 10px 20px;
+        }
+    }
+    .image-title {
+        font-family: @font__h4--font-family;
+        font-size: @font__h4--font-size;
+        line-height: @font__h4--line-height;
+        color: @color__slideshow-title--text;
+        @media only screen and (max-width: 735px) {
+            font-size: bkscale(@font__h4--font-size,0.9);
+            line-height: bkscale(@font__h4--line-height,0.9);
+        }
+        @media @mobile {
+            font-size: bkscale(@font__h4--font-size,0.8);
+            line-height: bkscale(@font__h4--line-height,0.8);
+        }
+    }
+    .image-description {
+        font-size: bkscale(@font__p--font-size,0.9);
+        line-height: bkscale(@font__p--line-height,0.9);
+        color: @color__slideshow-description--text;
+        @media @tablet {
+            font-size: bkscale(@font__p--font-size,0.8);
+            line-height: bkscale(@font__p--line-height,0.8);
+        }
+    }
+}
+
+// Slideshow Navigation
+// --------------------
+
+.responsiveslideshow {
+    .slide-navigation {
+        margin-top: 20px;
+        @media only screen and (min-width: 736px) {
+            position: absolute;
+            bottom: 80px;
+            left: 30px;
+            margin: 0;
+        }
+    }
+    .button {
+        height: 44px;
+        width: 44px;
+        padding: 0;
+        color: @color-swatch5;
+        background-color: @color__body--background;
+        &:hover {
+            background-color: darken(@color__body--background, 5%)
+        }
+        @media only screen and (max-width: 735px) {
+            background-color: darken(@color__body--background, 5%);
+        }
+    }
+    .icon:before {
+        margin-right: 0;
+    }
+    .icon:after {
+        margin-left: 0;
+    }
+    .control-text {
+        display: none;
+    }
+}
+
+// Slideshow Pagination
+// --------------------
+
+.slide-pagination {
+    position: relative;
+}
+
+.slide-pagination .pagination-list {
+    display: inline-block;
+    width: 100%;
+    margin-top: 20px;
+    @media only screen and (min-width: 736px) {
+        text-align: center;
+    }
+    .pagination-item {
+        margin: 0 2px;
+        display: inline-block;
+    }
+    .button {
+        width: 8px;
+        height: 8px;
+        min-height: 8px;
+        padding: 0;
+        text-indent: -9999px;
+        overflow: hidden;
+        box-shadow: none;
+        -webkit-border-radius: 50px;
+           -moz-border-radius: 50px;
+                border-radius: 50px;
+        background-color: @color__slideshow-pagination-item--background;
+    }
+    .pagination-item.selected .button {
+        background-color: @color__slideshow-pagination-item--background--selected;
+    }
+}
+
+// Responsive columns
+// ------------------
+
+// Two Columns
+.columns-two-left,
+.columns-two-right,
+// Three Columns
+.columns-three-left,
+.columns-three-middle,
+.columns-three-right,
+// Four Columns
+.columns-four-first,
+.columns-four-second,
+.columns-four-third,
+.columns-four-fourth {
+    .responsiveslideshow,
+    .responsiveslideshow .figure {
+        min-height: 350px;
+        @media only screen and (max-width: 650px) {
+            min-height: 300px;
+        }
+        @media only screen and (max-width: 500px) {
+            min-height: 250px;
+        }
+    }
+    .responsiveslideshow {
+        .caption {
+            width: 100%;
+            top: inherit;
+            padding: 10px 20px;
+        }
+        .slide-navigation {
+            position: relative;
+            bottom: inherit;
+            left: inherit;
+            margin: 0;
+            text-align: left;
+        }
+        .button {
+            background-color: darken(@color__body--background, 5%);
+        }
+        .slide-pagination .pagination-list {
+            text-align: left;
+        }
+    }
+}

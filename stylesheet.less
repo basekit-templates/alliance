@@ -1,0 +1,656 @@
+// -----------------------------
+// LESS Includes
+// -----------------------------
+
+
+@import "@{templateCommon}/bk-less-framework.less";             // BK LESS Framework
+
+@import "@{templateLocal}/less/variables-mixins.less";          // Variables
+
+@import "@{templateLocal}/less/widget-navigation.less";
+@import "@{templateLocal}/less/header-style.less";
+@import "@{templateLocal}/less/feature.less";
+@import "@{templateLocal}/less/ecom.less";
+@import "@{templateLocal}/less/blog.less";
+@import "@{templateLocal}/less/forms.less";
+@import "@{templateLocal}/less/buttons.less";
+@import "@{templateLocal}/less/slideshow.less";
+@import "@{templateLocal}/less/gallery.less";
+@import "@{templateLocal}/less/menu.less";
+
+// Include for bk-v8-test.less is at the bottom of the page
+
+// -----------------------------
+// Media Queries
+// -----------------------------
+
+@bp-tablet: ~"only screen and (max-width: 800px)";
+@bp-mobile: ~"only screen and (max-width: 600px)";
+
+
+
+
+// -----------------------------
+// Anchor links
+// -----------------------------
+
+a {
+    color: @color__link--text;
+}
+
+
+
+
+// -----------------------------
+// Global Styles
+// -----------------------------
+
+
+body {
+    background-color: @color__body--background;
+}
+
+h1 {
+    color: @color__h1--text;
+    font-family: @font__h1--font-family;
+    font-size: @font__h1--font-size;
+    font-weight: @font__h1--font-weight;
+    line-height: @font__h1--line-height;
+    letter-spacing: @font__h1--letter-spacing;
+}
+
+h2 {
+    color: @color__h2--text;
+    font-family: @font__h2--font-family;
+    font-size: @font__h2--font-size;
+    font-weight: @font__h2--font-weight;
+    line-height: @font__h2--line-height;
+    letter-spacing: @font__h2--letter-spacing;
+}
+
+h3 {
+    color: @color__h3--text;
+    font-family: @font__h3--font-family;
+    font-size: @font__h3--font-size;
+    font-weight: @font__h3--font-weight;
+    line-height: @font__h3--line-height;
+    letter-spacing: @font__h3--letter-spacing;
+}
+
+h4 {
+    color: @color__h4--text;
+    font-family: @font__h4--font-family;
+    font-size: @font__h4--font-size;
+    font-weight: @font__h4--font-weight;
+    line-height: @font__h4--line-height;
+    letter-spacing: @font__h4--letter-spacing;
+}
+
+p {
+    color: @color__p--text;
+    font-family: @font__p--font-family;
+    font-size: @font__p--font-size;
+    font-weight: @font__p--font-weight;
+    line-height: @font__p--line-height;
+    letter-spacing: @font__p--letter-spacing;
+}
+
+
+
+
+// -----------------------------
+//  container
+// -----------------------------
+
+.container {
+    margin-top: 30px;
+    display: inline-block;
+    width: 100%;
+    @media @tablet {
+        margin-top: 20px;
+    }
+}
+
+
+
+// -----------------------------
+// Widgets
+// -----------------------------
+
+.container .widget,
+.template-footer {
+    width: 90%;
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    @media only screen and (min-width: 1140px) {
+        width: 960px; // 1140px - 10% for margins
+        margin: 10px auto;
+    }
+}
+
+// Widgets in Responsive Columns
+.container {
+    // Two Columns
+    .columns-two-left,
+    .columns-two-right,
+    // Three Columns
+    .columns-three-left,
+    .columns-three-middle,
+    .columns-three-right,
+    // Four Columns
+    .columns-four-first,
+    .columns-four-second,
+    .columns-four-third,
+    .columns-four-fourth {
+        .widget {
+            width: auto;
+            margin: 10px 0;
+            @media only screen and (min-width: 1140px) {
+                width: auto;
+                margin: 10px auto;
+            }
+        }
+    }
+}
+
+
+// Stops mobile scrolling of the body - only the nav is scrollable
+.noscroll {
+    overflow: hidden;
+}
+
+
+
+
+// -----------------------------
+// Sticky Footer
+// -----------------------------
+
+.default-page {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    min-height: 100vh;
+}
+
+.default-page .container {
+    flex: 1;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding-top: 50px;
+    @media @tablet {
+        padding-top: 40px;
+    }
+    @media @mobile {
+        padding-top: 20px;
+    }
+}
+
+.template-footer {
+    padding: 50px 0;
+    text-align: center;
+}
+
+// Profile Widgets in footer
+
+// Address
+.template-footer .address-line {
+    padding-bottom: 0;
+}
+// Signup form
+.template-footer .signupform {
+    text-align: left;
+}
+
+// Twitter
+.template-footer {
+    .tweet-item {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    .tweet-wrap {
+        text-align: left;
+    }
+}
+
+
+
+// -----------------------------
+// Social Icons
+// -----------------------------
+
+.social-item {
+    margin-right: 3px;
+    margin-bottom: 5px;
+    text-align: center;
+    background-color: transparent;
+    &:hover {
+        background-color: transparent;
+    }
+    .social-link {
+        display: inline-block;
+        width: 31px;
+        height: 31px;
+        padding: 5px 8px 6px;
+        color: @color__socialicons--icon;
+        border: 2px solid @color__socialicons--border;
+        &:before {
+            margin-right: 0;
+            font-size: 14px;
+        }
+        &:hover {
+            text-decoration: none;
+            .transition(@duration:0.6s, @ease:ease-in-out);
+            transform: rotateY(360deg);
+            -ms-transform: rotateY(360deg);
+            -webkit-transform:rotateY(360deg);
+        }
+    }
+    .social-name {
+        display: none;
+    }
+}
+
+.template-footer .social-item .social-link {
+    padding: 4px 8px;
+}
+
+
+
+// -----------------------------
+// Twitter Widget
+// -----------------------------
+
+.twitter .tweet-item {
+    position: relative;
+    width: 100%;
+    padding: 20px 20px 20px 0;
+    background-color: @color__twitter-item--background;
+    .border-radius(3px);
+    p {
+        color: @color__twitter-tweet--text;
+        padding-bottom: 0;
+        font-size: bkscale(@font__p--font-size,0.9);
+        line-height: bkscale(@font__p--line-height,0.9);
+    }
+    .tweet-wrap {
+        width: 100%;
+        padding: 0 0 0 50px;
+    }
+    .tweet-wrap a {
+        word-break: break-word;
+        word-wrap: break-word;
+    }
+    .avatar {
+        position: absolute;
+        top: 20px;
+        left: -10px;
+    }
+    .avatar-link {
+        max-width: 48px;
+    }
+    .avatar,
+    .tweet-wrap {
+        display: inline-block;
+        vertical-align: top;
+        @media @mobile {
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+    .account-link {
+        font-family: @font__h3--font-family;
+        color: @color__twitter-account-name--text;
+        font-size: bkscale(@font__h3--font-size,0.8);
+        font-weight: @font__h3--font-weight;
+        line-height: bkscale(@font__h3--line-height,0.8);
+    }
+    .tweet-metadata {
+        font-size: 90%;
+        .timestamp,
+        .via {
+            color: lighten(@color__twitter-tweet--text, 15%);
+        }
+        .timestamp,
+        .via,
+        a,
+        span {
+            font-size: bkscale(@font__p--font-size,0.75);
+            line-height: bkscale(@font__p--line-height,0.75);
+        }
+        .retweeted-by {
+            display: inline-block;
+            width: 100%;
+            color: @color__twitter-tweet--text;
+        }
+    }
+    .timestamp {
+        margin-right: 5px;
+    }
+}
+
+.avatar-link:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 10px;
+    height: 10px;
+    border-style: solid;
+    border-width: 0 10px 10px 0;
+    border-color: transparent #333333 transparent transparent;
+}
+
+
+
+
+// --------------------
+// Commas after tags
+// --------------------
+
+.tag-link {
+    white-space: nowrap;
+}
+
+.tag-link:after {
+    content: "\002C";
+}
+.tag-item:last-child .tag-link:after {
+    content: "";
+}
+
+
+
+
+// -----------------------------
+// Yelp
+// -----------------------------
+
+
+.yelpreview ul {
+    list-style: none;
+    margin: 16px 0;
+}
+
+
+
+
+// -----------------------------
+// Image Widget
+// -----------------------------
+
+.imagewidget .caption {
+    .image-title {
+        font-family: @font__h4--font-family;
+        font-size: @font__h4--font-size;
+        line-height: @font__h4--line-height;
+        color: @color__image-title--text;
+        @media only screen and (max-width: 735px) {
+            font-size: bkscale(@font__h4--font-size,0.9);
+            line-height: bkscale(@font__h4--line-height,0.9);
+        }
+    }
+    .image-description {
+        font-size: bkscale(@font__p--font-size,0.9);
+        line-height: bkscale(@font__p--line-height,0.9);
+        color: @color__image-description--text;
+        @media @tablet {
+            font-size: bkscale(@font__p--font-size,0.8);
+            line-height: bkscale(@font__p--line-height,0.8);
+        }
+    }
+}
+
+
+
+
+// -----------------------------
+//  Divider (Keyline)
+// -----------------------------
+
+hr.rule {
+    height: 1px;
+    background-color: lighten(@color-swatch5, 8%);
+}
+
+
+// Horizontal rule in blog posts
+hr {
+    height: 1px;
+    border: 0;
+    margin-bottom: 18px;
+    background-color: lighten(@color-swatch5, 8%);
+}
+
+
+
+
+// -----------------------------
+// Click to Call
+// -----------------------------
+
+.clicktocall,
+.companyphone {
+    .label,
+    .phone-number {
+        color: @color__h4--text;
+    }
+    .phone-number-link:hover {
+        text-decoration: none;
+        cursor: text;
+        .label {
+            text-decoration: none;
+        }
+    }
+    .phone-number-link {
+        color: @color__h4--text;
+    }
+    @media only screen and (max-width: 737px) {
+        .phone-number-link {
+            min-height: 44px;
+            padding: 10px 20px;
+            text-align: center;
+            .border-radius(3px);
+            color: @color-swatch7;
+            background-color: @color__button--background;
+            &:hover {
+                background-color: @color__button--background--hover;
+                .transition(@duration:0.2s, @ease:ease-in-out);
+                cursor: pointer;
+                text-decoration: none;
+            }
+        }
+        .label,
+        .phone-number {
+            color: @color__button--text;
+        }
+    }
+    @media @mobile {
+        .phone-number-link {
+            display: inline-block;
+            width: 100%;
+        }
+    }
+}
+
+
+
+
+// -----------------------------
+// Blockquote
+// -----------------------------
+
+.content blockquote,
+.post-body blockquote {
+    position: relative;
+    quotes: "“" "”" "“" "”";
+    width: 100%;
+    padding: 40px 60px;
+    margin: 0 auto;
+    text-align: left;
+    border: 1px solid darken(@color__body--background,3%);
+    background-color: @color-swatch7;
+    .border-radius(3px);
+    color: @color__h4--text;
+    font-family: @font__p--font-family;
+    font-size: @font__p--font-size;
+    font-weight: @font__p--font-weight;
+    line-height: @font__p--line-height;
+    letter-spacing: @font__p--letter-spacing;
+    p {
+        color: @color__h4--text;
+        font-family: @font__p--font-family;
+        font-size: @font__p--font-size;
+        font-weight: @font__p--font-weight;
+        line-height: @font__p--line-height;
+        letter-spacing: @font__p--letter-spacing;
+        padding-bottom: 0;
+    }
+}
+
+.content blockquote:before,
+.post-body blockquote:before {
+    position: absolute;
+    color: @color-swatch4;
+    font-size: 40px;
+    left: 40px;
+}
+
+// Mobile
+@media @mobile {
+    .content blockquote,
+    .post-body blockquote {
+        padding: 30px 30px 30px 50px;
+    }
+    .content blockquote:before,
+    .post-body blockquote:before {
+        left: 25px;
+    }
+}
+
+// Four Columns
+.columns-four-first,
+.columns-four-second,
+.columns-four-third,
+.columns-four-fourth {
+    .content blockquote,
+    .post-body blockquote {
+        padding: 30px 30px 30px 50px;
+    }
+    .content blockquote:before,
+    .post-body blockquote:before {
+        left: 25px;
+    }
+}
+
+
+// -----------------------------
+// Text Size for Tablet & Mobile
+// -----------------------------
+
+@media only screen and (max-width: 901px) {
+    h1 {
+        font-size: bkscale(@font__h1--font-size,0.9);
+        line-height: bkscale(@font__h1--line-height,0.9);
+    }
+    h2 {
+        font-size: bkscale(@font__h2--font-size,0.9);
+        line-height: bkscale(@font__h2--line-height,0.9);
+    }
+    p, li, ol, blockquote, code, pre, time, td, th, .via, .profile a, .content a,
+    .responsiveslideshow .caption .image-description,
+    .category-link, .tag-link, .quantity-field,
+    .menusections-item a, .bk-pt-menu .menusections-item a,
+    .product-body {
+        font-size: bkscale(@font__p--font-size,0.9);
+        line-height: bkscale(@font__p--line-height,0.9);
+    }
+    .feature .headline {
+        font-size: bkscale(@font__feature-headline--font-size,0.85);
+        line-height: bkscale(@font__feature-headline--line-height,0.85);
+    }
+    .feature .strapline {
+        font-size: bkscale(@font__feature-strapline--font-size,0.9);
+        line-height: bkscale(@font__feature-strapline--line-height,0.9);
+    }
+    .feature .button {
+        font-size: bkscale(@font__button--font-size,0.9);
+        line-height: bkscale(@font__button--line-height,0.9);
+    }
+    .navigation-item .item-name {
+        font-size: bkscale(@font__navigation--font-size,0.9);
+        line-height: bkscale(@font__navigation--line-height,0.9);
+    }
+}
+
+@media only screen and (max-width: 737px) {
+    h1 {
+        font-size: bkscale(@font__h1--font-size,0.8);
+        line-height: bkscale(@font__h1--line-height,0.8);
+    }
+    h2 {
+        font-size: bkscale(@font__h2--font-size,0.73);
+        line-height: bkscale(@font__h2--line-height,0.73);
+    }
+    h3 {
+        font-size: bkscale(@font__h3--font-size,0.9);
+        line-height: bkscale(@font__h3--line-height,0.9);
+    }
+    h4, .account-link, .legend,
+    .listing-title {
+        font-size: bkscale(@font__h4--font-size,0.9);
+        line-height: bkscale(@font__h4--line-height,0.9);
+    }
+    p, li, ol, blockquote, code, pre, time, td, th, .via, .profile a, .content a,
+    .responsiveslideshow .caption .image-description,
+    .category-link, .tag-link, .quantity-field,
+    .menusections-item a, .bk-pt-menu .menusections-item a,
+    .product-body {
+        font-size: bkscale(@font__p--font-size,0.8);
+        line-height: bkscale(@font__p--line-height,0.8);
+    }
+    .feature .headline {
+        font-size: bkscale(@font__feature-headline--font-size,0.7);
+        line-height: bkscale(@font__feature-headline--line-height,0.7);
+    }
+    .feature .strapline {
+        font-size: bkscale(@font__feature-strapline--font-size,0.8);
+        line-height: bkscale(@font__feature-strapline--line-height,0.8);
+    }
+    .feature .button {
+        font-size: bkscale(@font__button--font-size,0.8);
+        line-height: bkscale(@font__button--line-height,0.8);
+    }
+    .navigation-item .item-name {
+        font-size: bkscale(@font__navigation--font-size,0.75);
+        line-height: bkscale(@font__navigation--line-height,0.75);
+    }
+}
+
+
+// --------------------------------
+// LESS Include for bk-v8-test.less
+// --------------------------------
+
+@import "@{templateLocal}/less/bk-v8-test.less";
+
