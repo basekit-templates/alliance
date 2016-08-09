@@ -1,9 +1,9 @@
 {
-    "name": "alliance-local",
+    "name": "alliance",
     "thumbnail": "thumbnail.png",
     "screenshot": "written-screenshot.jpg",
     "widgetVersion":2,
-    "pageTypes": ["home", "blogpostlist"],
+    "pageTypes": ["home"],
     "templateType":"standard",
     "tags": {
         "en": ["blog", "photography", "design", "portfolio", "gallery", "images", "technology", "creative", "media"],
