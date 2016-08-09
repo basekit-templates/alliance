@@ -5,7 +5,6 @@
         {{widget('logo', 'logo', {"defaultlogo": asset('images/logo-default.png'), "showTplWidget":"0"})|raw}}
         {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
     </div>
-    {% if plugins.blog.live %}
     <div class="header-button">
         {{widget('button', 'headerbutton', {
           'text': 'Contribute',
@@ -13,6 +12,5 @@
           'target': '_blank'
         })|raw}}
     </div>
-    {% endif %}
 </header>
 

@@ -7,13 +7,7 @@
 {% include "includes/header.twig" %}
 
 <div class="blogpostlist-page-bar">
-     <div class="page-title">
-        <div id="page-zones__template-widgets__pagetitle-page-title" class="widget  widget--template-widget" data-widget-type="pagetitle" data-uniqueid="page-zones__template-widgets__pagetitle-page-title">
-        <div class="bk-pagetitle  pagetitle  widget__pagetitle">
-          <h1 class="pagetitle-text  pagetitle__pagetitle-text">Hola</h1>
-        </div>
-    </div>
-        <!-- {{widget('pagetitle', 'page-title', {})|raw}} -->
+        {{widget('pagetitle', 'page-title', {})|raw}}
     </div>
     <div class="header-blog-search">
         {{widget('blogsearch', 'blogsearch', {})|raw}}
