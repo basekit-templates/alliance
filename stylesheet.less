@@ -170,8 +170,8 @@ p {
 // -----------------------------
 
 .template-footer {
-    padding: 30px 0 25px;
-    margin-top: 20px;
+    padding: 20px 0 15px;
+    margin-top: 30px;
     text-align: center;
     background-color: @color-swatch4;
 }
@@ -202,8 +202,29 @@ p {
 .template-footer {
     .widget {
         h1, h2, h3, h4, p, a, .social-link:before,
-        .signupform .legend, .phone-number {
+        .label, .legend, .phone-number {
             color: @color-swatch7;
+        }
+    }
+    .signupform {
+        max-width: 400px;
+        margin: 0 auto;
+
+        padding: 0;
+        background-color: transparent;
+        border: none;
+        .legend {
+            margin-bottom: 8px;
+        }
+        .input {
+            -webkit-border-radius: 3px 0 0 3px;
+            -moz-border-radius: 3px 0 0 3px;
+            border-radius: 3px 0 0 3px;
+            @media @mobile {
+                -webkit-border-radius: 3px;
+                -moz-border-radius: 3px;
+                border-radius: 3px;
+            }
         }
     }
     .profile .twitter {
@@ -219,10 +240,6 @@ p {
         font-weight: @font__p--font-weight;
         line-height: @font__p--line-height;
         letter-spacing: @font__p--letter-spacing;
-    }
-    @media @tablet {
-        display: block;
-        padding: 30px 5%;
     }
 }
 
