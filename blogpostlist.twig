@@ -7,7 +7,8 @@
 {% include "includes/header.twig" %}
 
 <div class="blogpostlist-page-bar">
-        {{widget('pagetitle', 'page-title', {})|raw}}
+    <div class="page-title">
+        {{widget('pagetitle', 'page-title', {})|raw}}       
     </div>
     <div class="header-blog-search">
         {{widget('blogsearch', 'blogsearch', {})|raw}}
