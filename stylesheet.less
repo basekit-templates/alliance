@@ -8,7 +8,6 @@
 @import "@{templateLocal}/less/variables-mixins.less";          // Variables
 
 @import "@{templateLocal}/less/widget-navigation.less";
-@import "@{templateLocal}/less/header-style.less";
 @import "@{templateLocal}/less/feature.less";
 @import "@{templateLocal}/less/ecom.less";
 @import "@{templateLocal}/less/blog.less";
@@ -17,6 +16,9 @@
 @import "@{templateLocal}/less/slideshow.less";
 @import "@{templateLocal}/less/gallery.less";
 @import "@{templateLocal}/less/menu.less";
+@import "@{templateLocal}/less/header-style.less";
+
+@import url(https://fonts.googleapis.com/css?family=Istok+Web:400,700);
 
 // Include for bk-v8-test.less is at the bottom of the page
 
@@ -251,7 +253,7 @@ p {
         display: inline-block;
         width: 31px;
         height: 31px;
-        padding: 5px 8px 6px;
+        padding: 6px 8px;
         color: @color__socialicons--icon;
         border: 2px solid @color__socialicons--border;
         &:before {
@@ -281,12 +283,41 @@ p {
 // Twitter Widget
 // -----------------------------
 
+.twitter {
+    .tweet-list {
+        .flex;
+        .flex-wrap(wrap);
+        .justify-content(space-between);
+        .align-items(stretch);
+        .align-content(stretch);
+
+        @media @tablet {
+            display: inline-block;
+            width: 100%;
+        }
+    }
+}
+
 .twitter .tweet-item {
+    -webkit-flex: 1 0 17%;
+    -ms-flex: 1 0 17%;
+    flex: 1 0 17%;
+
     position: relative;
     width: 100%;
     padding: 20px 20px 20px 0;
+    margin: 0 0 20px 35px;
+    &:first-child {
+        margin: 0 0 20px 15px;
+    }
+
     background-color: @color__twitter-item--background;
     .border-radius(3px);
+
+    @media @tablet {
+        display: block;
+        margin: 0 0 20px 24px;
+    }
     p {
         color: @color__twitter-tweet--text;
         padding-bottom: 0;
@@ -589,14 +620,6 @@ hr {
         font-size: bkscale(@font__feature-headline--font-size,0.85);
         line-height: bkscale(@font__feature-headline--line-height,0.85);
     }
-    .feature .strapline {
-        font-size: bkscale(@font__feature-strapline--font-size,0.9);
-        line-height: bkscale(@font__feature-strapline--line-height,0.9);
-    }
-    .feature .button {
-        font-size: bkscale(@font__button--font-size,0.9);
-        line-height: bkscale(@font__button--line-height,0.9);
-    }
     .navigation-item .item-name {
         font-size: bkscale(@font__navigation--font-size,0.9);
         line-height: bkscale(@font__navigation--line-height,0.9);
@@ -633,14 +656,6 @@ hr {
         font-size: bkscale(@font__feature-headline--font-size,0.7);
         line-height: bkscale(@font__feature-headline--line-height,0.7);
     }
-    .feature .strapline {
-        font-size: bkscale(@font__feature-strapline--font-size,0.8);
-        line-height: bkscale(@font__feature-strapline--line-height,0.8);
-    }
-    .feature .button {
-        font-size: bkscale(@font__button--font-size,0.8);
-        line-height: bkscale(@font__button--line-height,0.8);
-    }
     .navigation-item .item-name {
         font-size: bkscale(@font__navigation--font-size,0.75);
         line-height: bkscale(@font__navigation--line-height,0.75);
@@ -652,5 +667,5 @@ hr {
 // LESS Include for bk-v8-test.less
 // --------------------------------
 
-@import "@{templateLocal}/less/bk-v8-test.less";
+/*@import "@{templateLocal}/less/bk-v8-test.less";*/
 

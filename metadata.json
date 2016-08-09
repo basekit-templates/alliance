@@ -18,37 +18,19 @@
     "colorSwatches":
     {
         "Swatch 1": {
-            "color1":"#f3f0ed",
-            "color2":"#63d1d7",
-            "color3":"#2ba2a9",
-            "color4":"#6D615B",
-            "color5":"#959595",
-            "color6":"#ffffff",
-            "color7":"#ffffff"
-        },
-        "Swatch 2": {
-            "color1":"#f3f0ed",
-            "color2":"#ff8181",
-            "color3":"#ff8181",
-            "color4":"#695c5c",
-            "color5":"#878080",
-            "color6":"#ffffff",
-            "color7":"#ffffff"
-        },
-        "Swatch 3": {
-            "color1":"#f6f6f6",
-            "color2":"#FFDE00",
-            "color3":"#f58313",
-            "color4":"#0182bf",
-            "color5":"#687378",
+            "color1":"#f2f2f2",
+            "color2":"#3867b0",
+            "color3":"#ee5353",
+            "color4":"#27487b",
+            "color5":"#787a7f",
             "color6":"#ffffff",
             "color7":"#ffffff"
         }
     },
     "fontSwatch": {
-       "title": "Lora / Ubuntu",
+       "title": "Montserrat / Istok Web",
         "font1": {
-            "font-family": "\"Lora\", \"Georgia\", serif",
+            "font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
             "font-size": "36px",
             "font-weight": "400",
             "line-height": "46px",
@@ -56,7 +38,7 @@
             "letter-spacing": "0px"
         },
         "font2": {
-            "font-family": "\"Lora\", \"Georgia\", serif",
+            "font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
             "font-size": "34px",
             "font-weight": "400",
             "line-height": "44px",
@@ -64,7 +46,7 @@
             "letter-spacing": "0px"
         },
         "font3": {
-            "font-family": "\"Lora\", \"Georgia\", serif",
+            "font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
             "font-size": "26px",
             "font-weight": "400",
             "line-height": "36px",
@@ -72,7 +54,7 @@
             "letter-spacing": "0px"
         },
         "font4": {
-            "font-family": "\"Lora\", \"Georgia\", serif",
+            "font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
             "font-size": "20px",
             "font-weight": "400",
             "line-height": "32px",
@@ -80,7 +62,7 @@
             "letter-spacing": "0px"
         },
         "font5": {
-            "font-family": "\"Ubuntu\", Candara, Futura, sans-serif",
+            "font-family": "\"Istok Web\", Verdana, Geneva, sans-serif",
             "font-size": "16px",
             "font-weight": "400",
             "line-height": "28px",
@@ -88,48 +70,48 @@
             "letter-spacing": "0px"
         },
         "font6": {
-            "font-family": "\"Ubuntu\", Candara, Futura, sans-serif",
+            "font-family": "\"Istok Web\", Verdana, Geneva, sans-serif",
             "font-size": "26px",
             "font-weight": "300",
             "line-height": "36px",
             "color": "@color-swatch7",
-            "color-hover": "@color-swatch2",
+            "color-hover": "darken(@color-swatch4,20%)",
             "letter-spacing": "0px",
             "background-color": "@color-swatch7",
             "background-color-hover": "@color-swatch7"
          },
         "font7": {
-            "font-family": "\"Ubuntu\", Candara, Futura, sans-serif",
+            "font-family": "\"Istok Web\", Verdana, Geneva, sans-serif",
             "font-size": "16px",
             "font-weight": "400",
             "line-height": "26px",
-            "color": "@color-swatch7",
+            "color": "@color-swatch6",
             "letter-spacing": "0px",
-            "background-color": "@color-swatch4",
-            "background-color-hover": "@color-swatch3"
+            "background-color": "@color-swatch3",
+            "background-color-hover": "@color-swatch2"
         },
         "font8": {
-            "font-family": "\"Lora\", \"Georgia\", serif",
+            "font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
             "font-size": "36px",
             "font-weight": "400",
             "line-height": "46px",
-            "color": "@color-swatch4",
+            "color": "@color-swatch6",
             "letter-spacing": "0px"
         },
         "font9": {
-            "font-family": "\"Ubuntu\", Candara, Futura, sans-serif",
+            "font-family": "\"Istok Web\", Verdana, Geneva, sans-serif",
             "font-size": "16px",
             "font-weight": "400",
             "line-height": "28px",
-            "color": "@color-swatch5",
+            "color": "@color-swatch6",
             "letter-spacing": "0px"
         },
         "font10": {
-            "font-family": "\"Ubuntu\", Candara, Futura, sans-serif",
+            "font-family": "\"Istok Web\", Verdana, Geneva, sans-serif",
             "font-size": "24px",
             "font-weight": "700",
             "line-height": "34px",
-            "color": "@color-swatch4",
+            "color": "@color-swatch2",
             "letter-spacing": "0px"
         }
     },
@@ -199,8 +181,8 @@
         "navigation": {
             "color__navigation--text": "@font-swatch6-color",
             "color__navigation--text--hover": "@font-swatch6-color-hover",
-            "color__navigation--text--selected": "@font-swatch6-color",
-            "color__navigation--background": "@color-swatch4",
+            "color__navigation--text--selected": "@font-swatch6-color-hover",
+            "color__navigation--background": "@color-swatch2",
             "font__navigation--font-family" : "@font-swatch6-font-family",
             "font__navigation--font-size" : "@font-swatch6-font-size",
             "font__navigation--font-weight" : "@font-swatch6-font-weight",
@@ -210,7 +192,7 @@
         "feature": {
             "color__feature-headline--text": "@font-swatch8-color",
             "color__feature-strapline--text": "@font-swatch9-color",
-            "color__feature-content--background":"#ffffff",
+            "color__feature-content--background":"@color-swatch2",
             "color__feature-button--text": "@font-swatch8-color",
 
             "font__feature-headline--font-family" : "@font-swatch8-font-family",
@@ -227,7 +209,7 @@
         },
         "forms": {
             "color__form-legend--text": "@font-swatch3-color",
-            "color__form-label--text": "@color__primary",
+            "color__form-label--text": "@color-secondary",
             "color__form--background": "@color-swatch7",
             "color__form--border": "darken(@color__body--background,3%)"
         },
@@ -237,13 +219,13 @@
         },
         "gallery": {
             "color__gallery-caption--background": "hsla(hue(@color-swatch7), saturation(@color-swatch7), lightness(@color-swatch7), 0.8)",
-            "color__gallery-title--text": "@font-swatch8-color",
-            "color__gallery-description--text": "@font-swatch8-color"
+            "color__gallery-title--text": "@font-swatch4-color",
+            "color__gallery-description--text": "@font-swatch5-color"
         },
         "slideshow": {
             "color__slideshow--background": "transparent",
-            "color__slideshow-title--text": "@font-swatch8-color",
-            "color__slideshow-description--text": "@font-swatch9-color",
+            "color__slideshow-title--text": "@font-swatch4-color",
+            "color__slideshow-description--text": "@font-swatch5-color",
             "color__slideshow-caption--background": "@color-swatch7",
             "color__slideshow-pagination-item--background": "darken(@color__body--background, 10%)",
             "color__slideshow-pagination-item--background--selected": "@color-swatch4"
@@ -264,7 +246,7 @@
             "color__blogpost-title--text": "@font-swatch1-color"
         },
         "ecommerce": {
-            "color__ecomproductslist-product-title--text": "@color__primary",
+            "color__ecomproductslist-product-title--text": "@color__secondary",
             "color__ecomproduct-images--background": "darken(@color-swatch1, 6%)",
             "color__ecomproduct-content--background": "darken(@color-swatch1, 3%)",
             "color__ecomproduct-title--text": "@font-swatch1-color",

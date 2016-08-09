@@ -7,7 +7,7 @@
 // -------------------
 
 .extendednavigation {
-    width: 80px;
+    width: 110px;
     height: auto;
     position: fixed;
     top: 6px;
@@ -20,10 +20,6 @@
     -moz-border-radius-bottomright: 3px;
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
-
-    @media @bp-mobile {
-        width: 50px;
-    }
 }
 
 
@@ -104,14 +100,14 @@
 
 // Selected Navigation Link
 .navigation-item.selected > .item-name {
-    text-decoration: underline;
+    text-decoration: none;
     color: @color__navigation--text--selected;
 }
 
 
 // Adds Hover State
 .navigation-item .item-name:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 
@@ -132,7 +128,7 @@
 .navigation-list .navigation-list--children {
     padding: 0;
     position: relative;
-    left: 50px;
+    left: 0;
     top: 100%;
     height: auto;
     min-width: 100%;
@@ -186,17 +182,18 @@
 .navigation-toggle {
     .animation;
     // Displays as icon's middle bar
-    background-color: @color-swatch4;
+    background-color: transparent;
+    color: @color-swatch4;
     background-clip: content-box;
-    width: 50px;
+    width: 100px;
     height: 47px;
-    padding: 22px 10px;
+    padding: 0 0 0 44px;
     position: relative;
     margin: 5px auto;
-    text-indent: 9999px;
     overflow: hidden;
     display: block;
     z-index: 99999999999;
+    text-transform: uppercase;
 
     .transition(@duration:0.2s, @ease:ease-in-out);
 
@@ -223,6 +220,9 @@
 
     &:before {
         top: 14px;
+        -webkit-box-shadow: 0px 8px 0px 0px @color-swatch4;
+        -moz-box-shadow: 0px 8px 0px 0px @color-swatch4;
+        box-shadow: 0px 8px 0px 0px @color-swatch4;
 
     }
 
@@ -233,7 +233,14 @@
     }
 
     &:hover {
-        background-color: @color__primary;
+        background-color: transparent;
+        color: @color-swatch3;
+
+        &:before {
+            -webkit-box-shadow: 0px 8px 0px 0px @color__primary;
+            -moz-box-shadow: 0px 8px 0px 0px @color__primary;
+            box-shadow: 0px 8px 0px 0px @color__primary;
+        }
 
         &:after, &:before {
             background: @color__primary;
@@ -248,6 +255,7 @@
     background-color: fade(@color-swatch4, 0%);
     z-index: 99999999;
     position: relative;
+    color: transparent;
 
     &:before {
         top: 23px;
@@ -257,6 +265,10 @@
         -o-transform: rotate(45deg);
         -ms-transform: rotate(45deg);
         transform: rotate(45deg);
+
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
 
     }
     &:after {
