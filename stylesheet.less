@@ -164,6 +164,44 @@ p {
 
 
 
+// -----------------------------
+// Social Icons
+// -----------------------------
+
+.social-item {
+    margin-right: 3px;
+    margin-bottom: 5px;
+    text-align: center;
+    background-color: transparent;
+    &:hover {
+        background-color: transparent;
+    }
+    .social-link {
+        display: inline-block;
+        width: 31px;
+        height: 31px;
+        padding: 6px 8px;
+        color: @color__socialicons--icon;
+        border: 2px solid @color__socialicons--border;
+        &:before {
+            margin-right: 0;
+            font-size: 14px;
+        }
+        &:hover {
+            text-decoration: none;
+            .transition(@duration:0.6s, @ease:ease-in-out);
+            transform: rotateY(360deg);
+            -ms-transform: rotateY(360deg);
+            -webkit-transform:rotateY(360deg);
+        }
+    }
+    .social-name {
+        display: none;
+    }
+}
+
+
+
 
 // -----------------------------
 // Footer
@@ -241,43 +279,8 @@ p {
         line-height: @font__p--line-height;
         letter-spacing: @font__p--letter-spacing;
     }
-}
-
-
-
-// -----------------------------
-// Social Icons
-// -----------------------------
-
-.social-item {
-    margin-right: 3px;
-    margin-bottom: 5px;
-    text-align: center;
-    background-color: transparent;
-    &:hover {
-        background-color: transparent;
-    }
-    .social-link {
-        display: inline-block;
-        width: 31px;
-        height: 31px;
-        padding: 6px 8px;
-        color: @color__socialicons--icon;
-        border: 2px solid @color__socialicons--border;
-        &:before {
-            margin-right: 0;
-            font-size: 14px;
-        }
-        &:hover {
-            text-decoration: none;
-            .transition(@duration:0.6s, @ease:ease-in-out);
-            transform: rotateY(360deg);
-            -ms-transform: rotateY(360deg);
-            -webkit-transform:rotateY(360deg);
-        }
-    }
-    .social-name {
-        display: none;
+    .social-item .social-link {
+        border: 2px solid fade(@color-swatch7,60%);
     }
 }
 
