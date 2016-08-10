@@ -4,7 +4,7 @@
 // --------------------------------------
 
 .ecomproduct-page .container {
-    padding-top: 0;
+    margin-top: 0;
 }
 
 .container {
@@ -334,7 +334,7 @@
 }
 
 .ecomproductslist {
-    padding: 50px 0 0;
+    padding: 0;
     .listing-title {
         display: none;
     }
@@ -522,16 +522,15 @@
 
 .product-item-title {
     padding-bottom: 0;
-    a {
-        font-family:@font__h2--font-family;
-        font-size:@font__p--font-size;
-        font-weight: @font__p--font-weight;
-        line-height:@font__p--line-height;
-        color: @color__ecomproductslist-product-title--text;
-        letter-spacing: @font__p--letter-spacing;
-        &:hover {
-            color: @color__primary;
-        }
+    font-family:@font__h2--font-family;
+    font-size:@font__p--font-size;
+    font-weight: @font__p--font-weight;
+    line-height:@font__p--line-height;
+    color: @color__ecomproductslist-product-title--text;
+    letter-spacing: @font__p--letter-spacing;
+    &:hover {
+        color: @color__primary;
+        text-decoration: none;
     }
 }
 

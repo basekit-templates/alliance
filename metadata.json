@@ -224,9 +224,9 @@
         },
         "slideshow": {
             "color__slideshow--background": "transparent",
-            "color__slideshow-title--text": "@font-swatch4-color",
-            "color__slideshow-description--text": "@font-swatch5-color",
-            "color__slideshow-caption--background": "@color-swatch7",
+            "color__slideshow-title--text": "@font-swatch8-color",
+            "color__slideshow-description--text": "@font-swatch9-color",
+            "color__slideshow-caption--background": "#000000",
             "color__slideshow-pagination-item--background": "darken(@color__body--background, 10%)",
             "color__slideshow-pagination-item--background--selected": "@color-swatch4"
         },
