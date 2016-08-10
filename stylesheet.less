@@ -306,16 +306,16 @@ p {
 }
 
 .twitter .tweet-item {
-    -webkit-flex: 1 0 17%;
-    -ms-flex: 1 0 17%;
-    flex: 1 0 17%;
+    -webkit-flex: 1 0 25%;
+    -ms-flex: 1 0 25%;
+    flex: 1 0 25%;
 
     position: relative;
     width: 100%;
     padding: 20px 20px 20px 0;
     margin: 0 0 20px 35px;
     &:first-child {
-        margin: 0 0 20px 15px;
+        margin: 0 0 20px 10px;
     }
 
     background-color: @color__twitter-item--background;
@@ -399,7 +399,22 @@ p {
     border-color: transparent #333333 transparent transparent;
 }
 
-
+.responsivecolumns .twitter {
+    .tweet-list {
+        display: inline-block;
+        position: relative;
+        width: 97%;
+        left: 2%;
+    }
+    .tweet-list,
+    .tweet-item {
+        display: block;
+    }
+    .tweet-item,
+    .tweet-item:first-child {
+        margin: 0;
+    }
+}
 
 
 // --------------------
