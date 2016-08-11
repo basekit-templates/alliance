@@ -233,13 +233,16 @@ body.feature-content-wrap {
 
 body.feature-content-wrap {
     [data-widget-type="signupform"] .widget-overlay {
+        width: 100%;
         @media only screen and (min-width: 768px) {
            top: -133px;
+           width: 50%;
         }
     }
     .bk-tpl-hidden[data-widget-type="feature"] + [data-widget-type="signupform"] .widget-overlay {
         @media only screen and (min-width: 768px) {
             top: inherit;
+            width: 100%;
         }
     }
 }
