@@ -8,7 +8,6 @@
 
     <div class="homepage-header">
         <!-- Theme Feature Widget -->
-        <div class="feature-container">
             {{widget('feature', 'featurehome', {
                 'header': 'profile',
                 'strapline': 'This is the strapline',
@@ -16,15 +15,14 @@
                 'showBtn': true,
                 'buttonText': 'LOREM IPSUM'
             })|raw}}
-        </div>
-        <div class="homepage-signup">
+
             {{widget('signupform', 'signuphome', {
               'text': 'Submit',
               'label': 'Start inspiring others today!',
               'formTitle': 'Signup Form',
               'email': 'profile'
             })|raw}}
-        </div>
+
     </div>
 
     <!-- Container -->

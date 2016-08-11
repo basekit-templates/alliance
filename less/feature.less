@@ -127,55 +127,53 @@
 
 .homepage-header {
     position: relative;
-    .homepage-signup {
-        .signupform {
-            width: 100%;
-            padding: 0;
-            -webkit-border-radius: 0;
-            -moz-border-radius: 0;
-            border-radius: 0;
-            border: none;
+    .signupform {
+        width: 100%;
+        padding: 0;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+        border: none;
+    }
+    .legend {
+        display: none;
+    }
+    .form {
+        background-color: darken(@color__feature-content--background, 10%);
+    }
+    .form-body {
+        width: 100%;
+        margin: 30px auto;
+        max-width: 1300px;
+        padding-left: 5%;
+        padding-right: 5%;
+        @media @bp-mobile {
+            margin: 20px auto;
         }
-        .legend {
-            display: none;
+    }
+    .label {
+        color: @color-swatch6;
+        font-size: @font__p--font-size;
+        line-height: @font__p--line-height;
+    }
+    .signupform .form-body .button,
+    .form-group {
+        margin-bottom: 0;
+    }
+    .form-group .input {
+        height: 40px;
+        -webkit-border-radius: 3px 0 0 3px;
+        -moz-border-radius: 3px 0 0 3px;
+        border-radius: 3px 0 0 3px;
+        @media @mobile {
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 3px;
         }
-        .form {
-            background-color: darken(@color__feature-content--background, 10%);
-        }
-        .form-body {
-            width: 100%;
-            margin: 30px auto;
-            max-width: 1300px;
-            padding-left: 5%;
-            padding-right: 5%;
-            @media @bp-mobile {
-                margin: 20px auto;
-            }
-        }
-        .label {
-            color: @color-swatch6;
-            font-size: @font__p--font-size;
-            line-height: @font__p--line-height;
-        }
-        .signupform .form-body .button,
-        .form-group {
-            margin-bottom: 0;
-        }
-        .form-group .input {
-            height: 40px;
-            -webkit-border-radius: 3px 0 0 3px;
-            -moz-border-radius: 3px 0 0 3px;
-            border-radius: 3px 0 0 3px;
-            @media @mobile {
-                -webkit-border-radius: 3px;
-                -moz-border-radius: 3px;
-                border-radius: 3px;
-            }
-        }
-        .form-group .input,
-        .button {
-            min-height: 40px;
-        }
+    }
+    .form-group .input,
+    .button {
+        min-height: 40px;
     }
 }
 
@@ -183,6 +181,7 @@
 
 // Feature when there is text content and button
 // ---------------------------------------------
+
 
 body.feature-content-wrap {
     .feature .content-wrap {
@@ -213,7 +212,7 @@ body.feature-content-wrap {
         }
     }
     // signup form
-    .homepage-signup {
+    .homepage-header {
         .signupform {
             @media only screen and (min-width: 768px) {
                 position: absolute;
@@ -221,5 +220,13 @@ body.feature-content-wrap {
                 bottom: 0;
             }
         }
+    }
+}
+
+.bk-tpl-hidden[data-widget-type="feature"] + .signupform {
+    @media only screen and (min-width: 768px) {
+        position: relative;
+        max-width: 100%;
+        bottom: inherit;
     }
 }
