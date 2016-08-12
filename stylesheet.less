@@ -316,6 +316,9 @@ p {
     margin: 0 0 20px 35px;
     &:first-child {
         margin: 0 0 20px 10px;
+        @media @tablet {
+            margin: 0 0 20px 0;
+        }
     }
 
     background-color: @color__twitter-item--background;
@@ -323,7 +326,7 @@ p {
 
     @media @tablet {
         display: block;
-        margin: 0 0 20px 22px;
+        margin: 0 0 20px 0;
     }
     p {
         color: @color__twitter-tweet--text;
