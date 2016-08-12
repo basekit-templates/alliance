@@ -43,10 +43,15 @@
     background-color: @color__navigation--background;
 
     @media @bp-mobile {
-        padding: 90px 20px 20px 50px;
+        padding: 90px 20px 20px;
     }
 }
 
+.extendednavigation.align-left.open .navigation-list {
+    @media @bp-mobile {
+        padding: 90px 20px 20px 50px;
+    }
+}
 
 // Hides navigation until toggled
 .header-open .extendednavigation .navigation-list {
