@@ -1,7 +1,7 @@
 {
     "name": "alliance",
     "thumbnail": "thumbnail.png",
-    "screenshot": "written-screenshot.jpg",
+    "screenshot": "alliance-screenshot.jpg",
     "widgetVersion":2,
     "pageTypes": ["home", "donate"],
     "templateType":"standard",
