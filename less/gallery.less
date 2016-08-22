@@ -66,18 +66,19 @@
         font-size: @font__h4--font-size;
         line-height: @font__h4--line-height;
         color: @color__gallery-title--text;
+        width: 100%;
         @media only screen and (max-width: 735px) {
             font-size: bkscale(@font__h4--font-size,0.9);
             line-height: bkscale(@font__h4--line-height,0.9);
         }
     }
     .image-description {
-        font-size: bkscale(@font__p--font-size,0.8);
-        line-height: bkscale(@font__p--line-height,0.8);
+        font-size: bkscale(@font__p--font-size,0.9);
+        line-height: bkscale(@font__p--line-height,0.9);
         color: @color__gallery-description--text;
         @media @tablet {
-            font-size: bkscale(@font__p--font-size,0.7);
-            line-height: bkscale(@font__p--line-height,0.7);
+            font-size: bkscale(@font__p--font-size,0.8);
+            line-height: bkscale(@font__p--line-height,0.8);
         }
     }
     .caption-link:hover {
