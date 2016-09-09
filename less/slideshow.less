@@ -139,9 +139,6 @@
         width: 60%;
     }
     @media @mobile {
-        width: 50%;
-    }
-    @media only screen and (max-width: 350px) {
         position: relative;
         bottom: 0;
         right: 0;
@@ -155,7 +152,7 @@
     width: 100%;
     margin-top: 10px;
     text-align: right;
-    @media only screen and (max-width: 350px) {
+    @media @mobile {
         text-align: center;
     }
     .pagination-item {
@@ -203,6 +200,27 @@
         }
         @media only screen and (max-width: 500px) {
             min-height: 250px;
+        }
+    }
+}
+
+// Three Columns
+.columns-three-left,
+.columns-three-middle,
+.columns-three-right,
+// Four Columns
+.columns-four-first,
+.columns-four-second,
+.columns-four-third,
+.columns-four-fourth {
+    .slide-pagination {
+        position: relative;
+        bottom: 0;
+        right: 0;
+        margin: 0;
+        width: 100%;
+        .pagination-list {
+            text-align: center;
         }
     }
 }
